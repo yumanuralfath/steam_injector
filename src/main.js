@@ -29,15 +29,15 @@ async function search(page = 1) {
     renderResults(result);
     currentPageEl.textContent = `Page: ${page} / ${totalPageCount}`;
     prevPageEl.disabled = page === 1;
-    nextPageEl.disabled = page === totalPageCount;
+    nextPageEl.disabled = page === totalPageCount || (totalPageCount === 0);
 
+    console.log(totalPageCount);
     currentPage = page;
   } catch (error) {
     resultsEl.innerHTML = '<p>Error fetching results. Please try again.</p>';
     console.error('Search error:', error);
   }
 }
-
 
 
 function renderResults(results) {
