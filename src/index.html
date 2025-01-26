@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steam App Search</title>
+    <script type="module" src="./main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Search Steam Apps</h1>
+
+      <form class="row" id="search-form">
+        <input
+          id="search-input"
+          placeholder="Search for Steam Apps..."
+          aria-label="Search Input"
+          required
+        />
+        <button type="submit" aria-label="Submit Search">Search</button>
+      </form>
+
+      <div id="results-container">
+        <h3>Results</h3>
+        <div id="results-grid" class="results-grid"></div>
+        <p id="total-pages"></p>
+      </div>
+    </main>
+  </body>
+</html>
